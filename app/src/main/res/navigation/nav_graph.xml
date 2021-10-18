@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/homeFragment">
+    <fragment
+        android:id="@+id/categoryFragment"
+        android:name="com.thiha.android4k.testfirebasevideostreaming.view.fragments.CategoryFragment"
+        android:label="@string/category"
+        tools:layout="@layout/fragment_category">
+        <action
+            android:id="@+id/action_categoryFragment_to_videoFragment"
+            app:destination="@id/videoFragment" />
+        <action
+            android:id="@+id/action_categoryFragment_to_categoryDetailFragment"
+            app:destination="@id/categoryDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/categoryDetailFragment"
+        android:name="com.thiha.android4k.testfirebasevideostreaming.view.fragments.CategoryDetailFragment"
+        android:label="{collection}"
+        tools:layout="@layout/fragment_category_detail">
+        <argument
+            android:name="collection"
+            app:argType="com.thiha.android4k.testfirebasevideostreaming.models.Collection" />
+        <action
+            android:id="@+id/action_categoryDetailFragment_to_videoFragment"
+            app:destination="@id/videoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/videoFragment"
+        android:name="com.thiha.android4k.testfirebasevideostreaming.view.fragments.VideoFragment"
+        android:label="{video}"
+        tools:layout="@layout/fragment_video">
+        <argument
+            android:name="video"
+            app:argType="com.thiha.android4k.testfirebasevideostreaming.models.Video" />
+        <action
+            android:id="@+id/action_videoFragment_self"
+            app:destination="@id/videoFragment" />
+    </fragment>
+    <activity
+        android:id="@+id/loginActivity"
+        android:name="com.thiha.android4k.testfirebasevideostreaming.view.activity.LoginActivity"
+        android:label="@string/login"
+        tools:layout="@layout/activity_login" />
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.thiha.android4k.testfirebasevideostreaming.view.fragments.HomeFragment"
+        android:label="@string/home"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_homeFragment_to_categoryFragment"
+            app:destination="@id/categoryFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_videoFragment"
+            app:destination="@id/videoFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_categoryDetailFragment"
+            app:destination="@id/categoryDetailFragment" />
+    </fragment>
+</navigation>

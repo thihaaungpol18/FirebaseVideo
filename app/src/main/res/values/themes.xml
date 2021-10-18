@@ -1,0 +1,16 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.TestFirebaseVideoStreaming" parent="Theme.MaterialComponents.NoActionBar">
+
+        <item name="colorPrimary">@color/red</item>
+        <item name="colorPrimaryDark">@color/dark_red</item>
+        <item name="colorOnPrimary">@color/exo_white</item>
+        <item name="android:colorAccent">@color/gray</item>
+
+        <item name="colorSecondary">@color/accent</item>
+        <item name="colorSecondaryVariant">#b0003a</item>
+        <item name="colorOnSecondary">@color/exo_white</item>
+
+    </style>
+
+</resources>

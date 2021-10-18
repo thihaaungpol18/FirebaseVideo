@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "343476107400",
+    "project_id": "moviebucket-24611",
+    "storage_bucket": "moviebucket-24611.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:343476107400:android:b1924f7d5e7f8e9b77c73d",
+        "android_client_info": {
+          "package_name": "com.thiha.android4k.testfirebasevideostreaming"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "343476107400-f0cvgqg3tift106baulaiimr0d6pj4an.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBte9XUxvavWPaHWjM6iZE0hm_Cc8CliVQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "343476107400-f0cvgqg3tift106baulaiimr0d6pj4an.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

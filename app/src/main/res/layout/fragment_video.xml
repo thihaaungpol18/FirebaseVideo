@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".view.fragments.VideoFragment">
+
+        <ImageView
+            android:id="@+id/ivVideo"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:layout_marginTop="16dp"
+            android:background="@color/exo_black_opacity_60"
+            android:scaleType="centerCrop"
+            android:src="@drawable/error"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/playBtnFAB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/play_button"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_circle_play"
+            app:layout_constraintBottom_toBottomOf="@id/ivVideo"
+            app:layout_constraintEnd_toEndOf="@id/ivVideo"
+            app:layout_constraintStart_toStartOf="@id/ivVideo"
+            app:layout_constraintTop_toTopOf="@id/ivVideo"
+            app:useCompatPadding="true" />
+
+        <TextView
+            android:id="@+id/categoryText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/text_bg"
+            android:fontFamily="@font/bangers2"
+            android:textColor="@color/exo_white"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@id/ivVideo"
+            app:layout_constraintStart_toStartOf="@id/ivVideo"
+            tools:text="Category" />
+
+        <TextView
+            android:id="@+id/titleText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/text_bg"
+            android:fontFamily="@font/bangers2"
+            android:textAlignment="viewEnd"
+            android:textColor="@color/exo_white"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@id/ivVideo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/categoryText"
+            tools:text="Category" />
+
+        <TextView
+            android:id="@+id/tvMoreVideos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="4dp"
+            android:background="@color/exo_black_opacity_60"
+            android:fontFamily="@font/bangers2"
+            android:text="@string/more_videos"
+            android:textSize="32sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ivVideo" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvMore"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvMoreVideos"
+            tools:itemCount="3"
+            tools:listitem="@layout/item_video" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

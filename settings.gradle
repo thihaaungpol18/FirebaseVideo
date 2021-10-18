@@ -1,0 +1,2 @@
+rootProject.name = "TestFirebaseVideoStreaming"
+include ':app'

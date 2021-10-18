@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Dr.Aung Videos</string>
+    <string name="login">Login</string>
+    <string name="collection">Collection</string>
+    <string name="home">Home</string>
+    <string name="category">Category</string>
+    <string name="video">Video</string>
+    <string name="play_button">Play Button</string>
+    <string name="more_videos">More Videos</string>
+</resources>
