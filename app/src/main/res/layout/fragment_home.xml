@@ -15,13 +15,37 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="16dp"
-            android:fontFamily="@font/dosis"
+            android:fontFamily="@font/bangers2"
             android:text="@string/collection"
             android:textSize="32sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:text="Collection" />
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.facebook.shimmer.ShimmerFrameLayout
+            android:id="@+id/shimmer_layout_collection"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_collection_name">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <include
+                    layout="@layout/item_collection_placeholder"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content" />
+
+                <include
+                    layout="@layout/item_collection_placeholder"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+        </com.facebook.shimmer.ShimmerFrameLayout>
 
         <androidx.viewpager2.widget.ViewPager2
             android:id="@+id/idViewPagerForCollection"
@@ -30,6 +54,7 @@
             android:layout_marginStart="8dp"
             android:layout_marginEnd="8dp"
             android:orientation="horizontal"
+            android:visibility="invisible"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tv_collection_name" />
@@ -38,6 +63,7 @@
             android:id="@+id/tab_layout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:visibility="invisible"
             app:layout_constraintEnd_toEndOf="@id/idViewPagerForCollection"
             app:layout_constraintStart_toStartOf="@id/idViewPagerForCollection"
             app:layout_constraintTop_toBottomOf="@id/idViewPagerForCollection"
@@ -50,22 +76,49 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
-            android:fontFamily="@font/dosis"
-            android:text="Recent"
+            android:fontFamily="@font/bangers2"
+            android:text="@string/recent"
             android:textSize="32sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tab_layout" />
+            app:layout_constraintTop_toBottomOf="@id/shimmer_layout_collection" />
+
+
+        <com.facebook.shimmer.ShimmerFrameLayout
+            android:id="@+id/shimmer_layout_collection2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_recent_video">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <include
+                    layout="@layout/item_video_placeholder"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content" />
+
+                <include
+                    layout="@layout/item_video_placeholder"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+        </com.facebook.shimmer.ShimmerFrameLayout>
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rvPopular"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_margin="16dp"
+            android:visibility="invisible"
             app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tv_recent_video"
+            app:layout_constraintTop_toBottomOf="@id/tv_recent_video"
             tools:itemCount="3"
             tools:listitem="@layout/item_video" />
 

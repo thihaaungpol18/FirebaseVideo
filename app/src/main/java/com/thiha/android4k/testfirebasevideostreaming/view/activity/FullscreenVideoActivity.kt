@@ -1,18 +1,14 @@
 package com.thiha.android4k.testfirebasevideostreaming.view.activity
 
-import android.media.MediaDataSource
 import android.net.Uri
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Window
 import android.view.WindowManager
+import androidx.appcompat.app.AppCompatActivity
 import com.google.android.exoplayer2.MediaItem
 import com.google.android.exoplayer2.SimpleExoPlayer
-import com.google.android.exoplayer2.source.MediaSource
-import com.google.android.exoplayer2.source.MediaSourceFactory
 import com.google.android.exoplayer2.ui.PlayerView
 import com.thiha.android4k.testfirebasevideostreaming.R
-import com.thiha.android4k.testfirebasevideostreaming.models.Video
 
 class FullscreenVideoActivity : AppCompatActivity() {
 
@@ -23,7 +19,6 @@ class FullscreenVideoActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         requestFullscreen()
         setContentView(R.layout.activity_fullscreen_video)
-//        hideSupportActionBar()
     }
 
     override fun onResume() {
@@ -36,13 +31,7 @@ class FullscreenVideoActivity : AppCompatActivity() {
         simpleExoPlayer.setMediaItem(item)
         playView.player = simpleExoPlayer
         simpleExoPlayer.playWhenReady = true
-//        simpleExoPlayer.play()
         simpleExoPlayer.prepare()
-//        simpleExoPlayer.getPlayBackState
-    }
-
-    private fun hideSupportActionBar() {
-        supportActionBar?.hide()
     }
 
     private fun requestFullscreen() {

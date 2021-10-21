@@ -11,7 +11,7 @@ import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
 import com.thiha.android4k.testfirebasevideostreaming.R
 
-class   LoginActivity : AppCompatActivity() {
+class LoginActivity : AppCompatActivity() {
 
     private lateinit var btnLogin: Button
     private lateinit var etPhone: EditText
@@ -41,6 +41,7 @@ class   LoginActivity : AppCompatActivity() {
 
                 if (auth.currentUser != null) {
                     Toast.makeText(this, "Logged In Already", Toast.LENGTH_SHORT).show()
+                    startActivity(Intent(this, MainActivity::class.java))
                 } else {
                     login(etPhone.text.toString(), etPassword.text.toString())
                 }
